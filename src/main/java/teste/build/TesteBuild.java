@@ -9,7 +9,7 @@ import java.util.Arrays;
 @PropertySource("classpath:plugin.properties")
 @Component
 public class TesteBuild {
-    @Value("${}")
+    @Value("${buildNumber}")
     private String infoBuild;
 
     @Value("${app.main}")
