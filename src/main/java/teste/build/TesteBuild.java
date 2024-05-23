@@ -2,9 +2,11 @@ package teste.build;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 import java.util.Arrays;
 
+@PropertySource("classpath:plugin.properties")
 @Component
 public class TesteBuild {
     @Value("${}")
