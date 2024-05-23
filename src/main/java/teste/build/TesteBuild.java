@@ -7,7 +7,8 @@ import java.util.Arrays;
 
 @Component
 public class TesteBuild {
-
+    @Value("${}")
+    private String infoBuild;
 
     @Value("${app.main}")
     private String appName;
@@ -23,6 +24,7 @@ public class TesteBuild {
         System.out.println(appName);
         System.out.println(appVersion);
         System.out.println(Arrays.toString(appList));
+        System.out.println(infoBuild);
 
     }
 }
