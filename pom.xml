@@ -47,25 +47,27 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>buildnumber-maven-plugin</artifactId>
-                <version>3.1.0</version>
-                <executions>
-                    <execution>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>create</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <doCheck>true</doCheck>
-                    <doUpdate>true</doUpdate>
-                    <scmUrl>scm:git:https://github.com/JulioDiasz/estudo.git</scmUrl>
 
-                </configuration>
-            </plugin>
+
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>buildnumber-maven-plugin</artifactId>
+                        <version>3.1.0</version>
+                        <executions>
+                            <execution>
+                                <phase>validate</phase>
+                                <goals>
+                                    <goal>create</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <doCheck>true</doCheck>
+                            <doUpdate>true</doUpdate>
+                        </configuration>
+                    </plugin>
+
+
         </plugins>
 
         <finalName>$\{project.artifactId}-$\{project.version}-r$\{buildNumber}</finalName>
